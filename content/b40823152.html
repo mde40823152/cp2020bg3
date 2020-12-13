@@ -134,7 +134,280 @@ img.add_border {
           
         </header>
     <div id="tipue_search_content">hw3 << <a href='hw3.html'>Previous</a> <a href='b40923205.html'>Next</a> >> b40923205<br /><h1>b40823152</h1>
-<br />hw3 << <a href='hw3.html'>Previous</a> <a href='b40923205.html'>Next</a> >> b40923205</div>
+<p><strong>8 Rock-Paper-Scissors game rule</strong></p>
+<p>     猜拳遊戲</p>
+<p>Make a two-player Rock-Paper-Scissors game. (<em>Hint: Ask for player plays (using<span> </span><code class="highlighter-rouge">input</code>), compare them, print out a message of congratulations to the winner, and ask if the players want to start a new game</em>)</p>
+<p>Remember the rules:</p>
+<ul>
+<li>Rock beats scissors</li>
+<li>Scissors beats paper</li>
+<li>Paper beats rock</li>
+</ul>
+<p>製作兩人石頭剪刀布的遊戲。（提示：（使用<code class="highlighter-rouge">input</code>）詢問玩家玩法，進行比較，打印出對獲勝者表示祝賀的消息，並詢問玩家是否要開始新遊戲）</p>
+<p>記住規則：</p>
+<ul>
+<li>石頭打敗剪刀</li>
+<li>剪刀打敗布</li>
+<li>布打敗石頭</li>
+</ul>
+<p><strong>Discussion(討論區)</strong></p>
+<p>Concepts for this week:</p>
+<ul>
+<li>While loops</li>
+<li>Infinite loops</li>
+<li>Break statements</li>
+</ul>
+<p><span>本週的概念：</span></p>
+<ul>
+<li><span>While迴圈</span></li>
+<li><span>Infinite迴圈</span></li>
+<li><span>中斷聲明</span><span></span></li>
+</ul>
+<p><strong>While loops(While迴圈)</strong></p>
+<p>We have already discussed<span> </span><code class="highlighter-rouge">for</code><span> </span>loops, or loops that look sequentially (one by one) at elements in a list. There is a second type of loop that works in a slightly different way called a<span> </span><code class="highlighter-rouge">while</code><span> </span>loop.</p>
+<p>The idea is simple: while a certain condition is<span> </span><code class="highlighter-rouge">True</code>, keep doing something. For example:</p>
+<p><span>我們已經討論過</span><code class="highlighter-rouge">for</code><span>循環，或循環（逐一）查看列表中的元素的循環。還有第二種類型的循環，其工作方式略有不同，稱為</span><code class="highlighter-rouge">while</code><span>循環。</span></p>
+<p><span>這個想法很簡單：在一定條件下</span><code class="highlighter-rouge">True</code><span>，繼續做某事。例如：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">a = 5
+ while (a &gt; 0):
+   print(a)
+   a -= 1
+</pre>
+<pre><br/><br/></pre>
+<p>The output of this code segment is:</p>
+<p><span>代碼的輸出為：</span></p>
+<pre><code class="language-python" data-lang="python">  <span class="mi">5</span>
+  <span class="mi">4</span>
+  <span class="mi">3</span>
+  <span class="mi">2</span>
+  <span class="mi">1</span></code></pre>
+<p>A particularly useful way to use<span> </span><code class="highlighter-rouge">while</code><span> </span>loops is checking user input for correctness. For example:</p>
+<p><span>使用</span><code class="highlighter-rouge">while</code><span>循環的一種特別有用的方法是檢查用戶輸入的正確性。例如：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">quit = input('Type "enter" to quit:' )
+while quit != "enter":
+  quit = input('Type "enter" to quit:' )
+</pre>
+<pre></pre>
+<p>The uses for this are infinite, and can (and should!) be combined with conditionals to yield the most efficient results.</p>
+<p><span>此方法的用途是無限的，並且可以（並且應該！）與條件條件結合使用以產生最有效的結果。</span></p>
+<p>Infinite loops(無限迴圈)</p>
+<p>An infinite loop is a loop that never stops. This means that the condition in the beginning of the while loop will always be true.</p>
+<p>For example:</p>
+<p><span>無限循環是永不停止的循環。這意味著while循環開始時的條件將始終為true。</span></p>
+<p><span>例如：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+2
+3
+i = 5
+  while i &gt; 0:
+    print("Inside the loop")
+</pre>
+<p>What will happen is the loop will print out the phrase “Inside the loop” forever and ever. If you are running your computer, you will have to “kill the program” to stop it. Each operating system has a different way of “killing a program” to get out of an infinite loop.</p>
+<p>On Linux: in the terminal, type “CTRL-C” to kill the program that is currently running in the terminal. If you are using the IDLE Python IDE, then you must press “CTRL-D” to exit your running program. When in doubt, do a Google search before you start programming!</p>
+<p>On Windows: type “CTRL-ALT-DEL” and open the task manager to kill the program.</p>
+<p>On Mac: right-click on the task, and kill the program that is running forever.</p>
+<p>If you find yourself in an infinite loop, your program will never end.</p>
+<p><span>將會發生的是，循環將永遠打印出短語“ Inside the loop”。如果您正在運行計算機，則必須“清除該程序”以將其停止。每個編碼軟體都有不同的“清除程序”以擺脫無限循環的方式。</span></p>
+<p><span>在Linux上：在終端中，鍵入“ CTRL-C”以終止終端中當前正在運行的程序。如果使用的是IDLE Python IDE，則必須按“ CTRL-D”退出正在運行的程序。如有疑問，請在開始編程之前進行Google搜索！</span></p>
+<p><span>在Windows上：鍵入“ CTRL-ALT-DEL”並打開任務管理器以終止程序。</span></p>
+<p><span>在Mac上：右鍵單擊該任務，然後終止永久運行的程序。</span></p>
+<p><span>如果發現自己陷入無限循環，則程序將永遠不會結束。</span></p>
+<p><br/>Break statements(<strong>中斷聲明</strong>)</p>
+<p>A<span> </span><code class="highlighter-rouge">break</code><span> </span>statement stops the execution of a loop before the original condition is met. While the use of a<span> </span><code class="highlighter-rouge">break</code><span> </span>statement will often start an argument about good coding practices, sometimes it is useful.</p>
+<p>For example:</p>
+<p><code class="highlighter-rouge">break</code><span>在滿足原始條件之前，一條語句將停止執行循環。儘管使用</span><code class="highlighter-rouge">break</code><span>語句通常會引發關於實際編碼的爭論，但有時它很有用。</span></p>
+<p><span>例如：</span></p>
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+2
+3
+4
+5
+6
+while True:
+    usr_command = input("Enter your command: ")
+    if usr_command == "quit":
+      break
+    else:
+      print("You typed " + usr_command)
+</pre>
+<p><span><br/><br/></span></p>
+<p>In this case, the<span> </span><code class="highlighter-rouge">break</code><span> </span>statement is used to break off the “infinite while loop” that we have constructed with the<span> </span><code class="highlighter-rouge">while True</code><span> </span>statement.</p>
+<p><span>在這種情況下，該</span><code class="highlighter-rouge">break</code><span>語句用於中斷我們使用該</span><code class="highlighter-rouge">while True</code><span>語句構造的“無限while循環” 。</span></p>
+<p><strong>Happy coding!</strong></p>
+<p><strong>編碼愉快!</strong></p>
+<p><span><span> </span></span></p>
+<hr/>
+<p>25 Guessing Game Two game</p>
+<p>        <span>猜謎遊戲2</span></p>
+<hr/>
+<p>In<span> </span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html">a previous exercise</a>, we’ve written a program that “knows” a number and asks a user to guess it.</p>
+<p>This time, we’re going to do exactly the opposite. You, the user, will have in your head a number between 0 and 100. The program will guess a number, and you, the user, will say whether it is too high, too low, or your number.</p>
+<p>At the end of this exchange, your program should print out how many guesses it took to get your number.</p>
+<p>As the writer of this program, you will have to choose how your program will strategically guess. A naive strategy can be to simply start the guessing at 1, and keep going (2, 3, 4, etc.) until you hit the number. But that’s not an optimal guessing strategy. An alternate strategy might be to guess 50 (right in the middle of the range), and then increase / decrease by 1 as needed. After you’ve written the program, try to find the optimal strategy! (We’ll talk about what is the optimal one next week with the solution.)</p>
+<p><span>在上</span><a href="https://www.practicepython.org/exercise/2014/04/02/09-guessing-game-one.html"><span>一個練習中</span></a><span>，我們編寫了一個程序，該程序“知道”一個數字並要求用戶猜測它。</span></p>
+<p><span><span>這次，我們將做相反的事情。</span><span>您（用戶）的腦海中會有一個介於0到100之間的數字。程序將猜測一個數字，而您（用戶）將說出它是太高，太低還是您的數字。</span></span></p>
+<p><span><span>交換結束後，您的程序應打印出獲得號碼所需的猜測次數。</span></span></p>
+<p><span><span>作為該程序的作者，您將不得不選擇您的程序將如何進行戰略性猜測。</span><span>幼稚的策略可以是簡單地從1開始猜測，並繼續進行（2、3、4等），直到您得出數字為止。</span><span>但這不是最佳的猜測策略。</span><span>另一種策略是猜測50（在範圍的中間），然後根據需要增加/減少1。</span><span>編寫完程序後，嘗試找到最佳策略！</span><span>（我們將在下週討論該解決方案的最佳選擇。）</span></span></p>
+<p></p>
+<p><strong>Topics and links for more information</strong></p>
+<p>(<span>更多資訊於連結和主題)</span></p>
+<p>This exercise doesn’t need any functions, but it does need extensive use of variables, math, and user input.</p>
+<p>You can refer to<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">this exercise on user input</a>,<span> </span><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html">this one on rock paper scissors</a>, and many others.</p>
+<p>If you want to implement the optimal solution without thinking about it first, you can read this<span> </span><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm">Wikipedia article on binary search</a>.</p>
+<p><span>該練習不需要任何功能，但確實需要大量使用變量，數學和用戶輸入。</span></p>
+<p><span><span>您可以</span></span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span><span>在用戶輸入上</span></span></a><span><span>參考</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>此練習</span></a><span>，</span></span><a href="https://www.practicepython.org/exercise/2014/03/26/08-rock-paper-scissors.html"><span><span>在石頭剪刀</span></span></a><span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>上</span></a><span>參考</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>此練習</span></a><span>，以及其他許多參考。</span></span></p>
+<p><span><span>如果您想在不首先考慮的情況下實施最佳解決方案，則可以閱讀</span></span><a href="https://en.wikipedia.org/wiki/Binary_search_algorithm"><span><span>有關二進制搜索的Wikipedia文章</span></span></a><span><span>。</span></span></p>
+<p></p>
+<p><strong>Happy coding!</strong></p>
+<p><strong>編碼愉快!</strong></p>
+<hr/>
+<p>27 Tic Tac Toe Draw</p>
+<p><em>This exercise is Part 3 of 4 of the Tic Tac Toe exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">Part 1</a>,<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">Part 2</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html">Part 4</a>.</em></p>
+<p>In a<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">previous exercise</a><span> </span>we explored the idea of using a list of lists as a “data structure” to store information about a tic tac toe game. In a tic tac toe game, the “game server” needs to know where the<span> </span><code class="highlighter-rouge">X</code>s and<span> </span><code class="highlighter-rouge">O</code>s are in the board, to know whether player 1 or player 2 (or whoever is<span> </span><code class="highlighter-rouge">X</code><span> </span>and<span> </span><code class="highlighter-rouge">O</code><span> </span>won).</p>
+<p>There has also been an exercise about<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">drawing the actual tic tac toe gameboard</a><span> </span>using text characters.</p>
+<p>The next logical step is to deal with handling user input. When a player (say player 1, who is<span> </span><code class="highlighter-rouge">X</code>) wants to place an<span> </span><code class="highlighter-rouge">X</code><span> </span>on the screen, they can’t just click on a terminal. So we are going to approximate this clicking simply by asking the user for a coordinate of where they want to place their piece.</p>
+<p>As a reminder, our tic tac toe game is really a list of lists. The game starts out with an empty game board like this:</p>
+<p><em><span>此練習是Tic Tac Toe練習系列4的第3部分。其他練習是：</span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span>第1部分</span></a><span>，</span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span>第2</span></a><span></span><a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html"><span>部分</span></a><span>和<a href="https://www.practicepython.org/exercise/2016/08/03/29-tic-tac-toe-game.html">第4部分</a>。</span></em></p>
+<p><span><span>在</span></span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span><span>先前的練習中，</span></span></a><span><span>我們探討了使用列表列表作為“數據結構”來存儲有關井字遊戲的信息的想法。</span><span>在一個井字遊戲中，“遊戲服務器”需要知道其中</span></span><code class="highlighter-rouge">X</code><span><span>S和</span></span><code class="highlighter-rouge">O</code><span><span>s為中板，知道是否播放器1或播放器2（或誰是</span></span><code class="highlighter-rouge">X</code><span><span>和</span></span><code class="highlighter-rouge">O</code><span><span>韓元）。</span></span></p>
+<p><span><span>還進行了有關</span><span>使用文本字符</span></span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span><span>繪製實際井字遊戲板</span></span></a><span><span>的練習</span><span>。</span></span></p>
+<p><span><span>下一步的邏輯步驟是處理用戶輸入。</span><span>當玩家（例如玩家1，即</span></span><code class="highlighter-rouge">X</code><span><span>）想要</span></span><code class="highlighter-rouge">X</code><span><span>在屏幕上</span><span>放置一個</span><span>時，他們不能僅單擊終端。</span><span>因此，我們將簡單地通過詢問用戶要放置其作品的坐標來近似此點擊。</span></span></p>
+<p><span><span>提醒一下，我們的井字遊戲實際上是一個列表列表。</span><span>遊戲從一個空的遊戲板開始，如下所示：</span></span></p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_498875">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">game = [[0, 0, 0],
+    [0, 0, 0],
+    [0, 0, 0]]
+</pre>
+</div>
+</div>
+<pre></pre>
+<p>The computer asks Player 1 (X) what their move is (in the format<span> </span><code class="highlighter-rouge">row,col</code>), and say they type<span> </span><code class="highlighter-rouge">1,3</code>. Then the game would print out</p>
+<p><span>電腦問玩家1（X）他們的移動方向（格式為</span><code class="highlighter-rouge">row,col</code><span><span>），然後說出他們的輸入</span></span><code class="highlighter-rouge">1,3</code><span><span>。</span><span>然後遊戲會打印出來</span></span></p>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_627245">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">game = [[0, 0, X],
+    [0, 0, 0],
+    [0, 0, 0]]
+</pre>
+</div>
+</div>
+<pre></pre>
+<p>And ask Player 2 for their move, printing an<span> </span><code class="highlighter-rouge">O</code><span> </span>in that place.</p>
+<p>Things to note:</p>
+<ul>
+<li>For this exercise, assume that player 1 (the first player to move) will always be<span> </span><code class="highlighter-rouge">X</code><span> </span>and player 2 (the second player) will always be<span> </span><code class="highlighter-rouge">O</code>.</li>
+<li>Notice how in the example I gave coordinates for where I want to move starting from (1, 1) instead of (0, 0). To people who don’t program, starting to count at 0 is a strange concept, so it is better for the user experience if the row counts and column counts start at 1. This is not required, but whichever way you choose to implement this, it should be explained to the player.</li>
+<li>Ask the user to enter coordinates in the form “row,col” - a number, then a comma, then a number. Then you can use your Python skills to figure out which row and column they want their piece to be in.</li>
+<li>Don’t worry about checking whether someone won the game, but if a player tries to put a piece in a game position where there already is another piece, do not allow the piece to go there.</li>
+</ul>
+<p>Bonus:</p>
+<ul>
+<li>For the “standard” exercise, don’t worry about “ending” the game - no need to keep track of how many squares are full. In a bonus version, keep track of how many squares are full and automatically stop asking for moves when there are no more valid moves.</li>
+</ul>
+<p><span>並詢問玩家2的舉動，並</span><code class="highlighter-rouge">O</code><span>在該位置打印一個。</span></p>
+<p><span><span>注意事項：</span></span></p>
+<ul>
+<li><span><span>在本練習中，假設玩家1（第一位移動的玩家）將始終為，</span></span><code class="highlighter-rouge">X</code><span><span>而玩家2（第二位移動的玩家）將始終為</span></span><code class="highlighter-rouge">O</code><span><span>。</span></span></li>
+<li><span><span>請注意，在示例中，我如何給出要從（1，1）而不是（0，0）開始移動的坐標。</span><span>對於不編程的人，從0開始計數是一個奇怪的概念，因此如果行計數和列計數從1開始，則對用戶體驗更好。這不是必需的，但是無論選擇哪種方式來實現，應該向玩家解釋。</span></span></li>
+<li><span><span>要求用戶以“ row，col”的形式輸入坐標-一個數字，然後是一個逗號，然後是一個數字。</span><span>然後，您可以使用您的Python技能來確定他們希望自己的作品位於哪一行。</span></span></li>
+<li><span><span>不必擔心是否有人贏得了比賽，但是如果玩家試圖將一個棋子放置在已經有另一個棋子的遊戲位置中，則不要讓該棋子去那裡。</span></span></li>
+</ul>
+<p><span><span>獎金：</span></span></p>
+<ul>
+<li><span><span>對於“標準”練習，不必擔心“結束”遊戲-無需跟踪多少個正方形已滿。</span><span>在獎勵版本中，跟踪多少個正方形已滿，並在沒有更多有效移動時自動停止要求移動。</span></span></li>
+</ul>
+<p><strong>Concepts 概念</strong></p>
+<hr/>
+<p>One review concept that is definitely needed (in addition to the<span> </span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html">user input</a><span> </span>that is the core of the exercise) is the need to “split” strings.</p>
+<p>The user will input coordinates in the form “row,col”, which<span> </span><code class="highlighter-rouge">input()</code><span> </span>will then read in as a string. But we really want the numbers that come out of that string, to know which row and column to place the piece at.</p>
+<p>One approach is to use the idea of<span> </span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html">strings as lists</a><span> </span>to extract the row and column numbers. This works great if your row and column numbers are always single digits - the row will always be at index 0 and the column will always be at index 2. But this breaks when the numbers are larger than one digit (I know, not going to happen in tic tac toe, but it’s easy to image extending this to other games).</p>
+<p>Instead, there are two string manipulation functions that will help you:</p>
+<ol>
+<li><a href="https://docs.python.org/2/library/string.html#string.split"><code class="highlighter-rouge">.split()</code></a><span> </span>- Takes a string and returns a list, using the separator as the split criteria. So if you have a string<span> </span><code class="highlighter-rouge">name = "John Doe"</code><span> </span>and do<span> </span><code class="highlighter-rouge">name_list = name.split(" ")</code>,<span> </span><code class="highlighter-rouge">name_list</code><span> </span>will be<span> </span><code class="highlighter-rouge">["John", "Doe"]</code>. You can use any separator / split character you want. Just remember, that each of the elements returned back will be a string as well.</li>
+<li><a href="https://docs.python.org/2/library/string.html#string.strip"><code class="highlighter-rouge">.strip()</code></a><span> </span>- Takes a string and removes the whitespace on the left and right sides of it. So you have a string<span> </span><code class="highlighter-rouge">name = " Michele "</code>, and you do<span> </span><code class="highlighter-rouge">name = name.strip()</code>, and now<span> </span><code class="highlighter-rouge">name</code><span> </span>will just be<span> </span><code class="highlighter-rouge">"Michele"</code><span> </span>- nice and clean.</li>
+</ol>
+<p>I challenge you to figure out how to use them in the exercise!</p>
+<p><span>（除了作為練習核心的</span><a href="https://www.practicepython.org/exercise/2014/01/29/01-character-input.html"><span>用戶輸入</span></a><span>之外）肯定需要一個審核概念是“拆分”字符串。</span></p>
+<p><span><span>用戶將以“ row，col”形式輸入坐標，然後</span></span><code class="highlighter-rouge">input()</code><span><span>將其作為字符串讀取。</span><span>但是我們確實希望從該字符串中得出的數字知道將片段放置在哪一行和哪一列。</span></span></p>
+<p><span><span>一種方法是使用</span></span><a href="https://www.practicepython.org/exercise/2014/03/12/06-string-lists.html"><span><span>字符串作為列表</span></span></a><span><span>的概念</span><span>來提取行號和列號。</span><span>如果行號和列號始終為單個數字，則此方法非常有用-行將始終位於索引0，列將始終位於索引2。但是，當數字大於一位時，這種方法會中斷（我知道，會在井字遊戲中發生，但很容易將其擴展到其他遊戲。</span></span></p>
+<p><span><span>相反，有兩個字符串操作函數可以為您提供幫助：</span></span></p>
+<ol>
+<li>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_823447">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+.split()
+</pre>
+</div>
+</div>
+<span><span>-使用分隔符作為分割條件，獲取一個字符串並返回一個列表。</span><span>因此，如果您有琴弦</span></span><code class="highlighter-rouge">name = "John Doe"</code><span><span>做</span></span><code class="highlighter-rouge">name_list = name.split(" ")</code><span><span>，</span></span><code class="highlighter-rouge">name_list</code><span><span>將是</span></span><code class="highlighter-rouge">["John", "Doe"]</code><span><span>。</span><span>您可以使用所需的任何分隔符/拆分字符。</span><span>請記住，返回的每個元素也將是一個字符串。</span></span></li>
+<li>
+<div>
+<div class="syntaxhighlighter py" id="highlighter_116993">
+<pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">1
+.strip()
+</pre>
+</div>
+</div>
+<span><span>-取一個字符串並刪除其左側和右側的空格。</span><span>這樣，您就有了一個字符串</span></span><code class="highlighter-rouge">name = " Michele "</code><span><span>，並且執行了</span></span><code class="highlighter-rouge">name = name.strip()</code><span><span>，現在</span></span><code class="highlighter-rouge">name</code><span><span>就變得</span></span><code class="highlighter-rouge">"Michele"</code><span><span>很乾淨了。</span></span></li>
+</ol>
+<p><span><span>我挑戰您找出如何在練習中使用它們！</span></span></p>
+<p><strong>Happy coding!</strong></p>
+<hr/><p>29 Tic Tac Toe Game</p>
+<p>Exercise 29 </p>
+<hr/>
+<p><em>This exercise is Part 4 of 4 of the Tic Tac Toe exercise series. The other exercises are:<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">Part 1</a>,<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">Part 2</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html">Part 3</a>.</em></p>
+<p>In 3 previous exercises, we built up a few components needed to build a Tic Tac Toe game in Python:</p>
+<ol>
+<li><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">Draw the Tic Tac Toe game board</a></li>
+<li><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">Checking whether a game board has a winner</a></li>
+<li><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html">Handle a player move from user input</a></li>
+</ol>
+<p><em><span>此練習是Tic Tac Toe練習系列4之4的第4部分。其他練習是：</span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span>第1部分</span></a><span>，</span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span>第2</span></a><span></span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html"><span>部分</span></a><span>和<a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html">第3部分</a>。</span></em></p>
+<p><span><span>在之前的3個練習中，我們建立了一些用Python構建Tic Tac Toe遊戲所需的組件：</span></span></p>
+<ol>
+<li><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span><span>畫井字遊戲板</span></span></a></li>
+<li><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span><span>檢查遊戲板是否有贏家</span></span></a></li>
+<li><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html"><span><span>處理玩家從用戶輸入的移動</span></span></a></li>
+</ol>
+<p>The next step is to put all these three components together to make a two-player Tic Tac Toe game! Your challenge in this exercise is to use the functions from those previous exercises all together in the same program to make a two-player game that you can play with a friend. There are a lot of choices you will have to make when completing this exercise, so you can go as far or as little as you want with it.</p>
+<p>Here are a few things to keep in mind:</p>
+<ul>
+<li>You should keep track of who won - if there is a winner, show a congratulatory message on the screen.</li>
+<li>If there are no more moves left, don’t ask for the next player’s move!</li>
+</ul>
+<p>As a bonus, you can ask the players if they want to play again and keep a running tally of who won more - Player 1 or Player 2.</p>
+<p><span>下一步是將所有這三個組成部分放在一起，組成一個兩人遊戲的Tic Tac Toe遊戲！在本練習中，您面臨的挑戰是在同一程序中一起使用以前的練習中的功能，以製作一個可以與朋友一起玩的兩人遊戲。完成本練習時，您將有很多選擇，因此您可以根據自己的需要進行選擇。</span></p>
+<p><span><span>請記住以下幾點：</span></span></p>
+<ul>
+<li><span><span>您應該計載</span></span><span><span>誰贏-如果有贏家，則在屏幕上顯示祝賀消息。</span></span></li>
+<li><span><span>如果沒有其他動作了，請不要要求下一個玩家的動作！</span></span></li>
+</ul>
+<p><span><span>作為獎勵，您可以詢問玩家是否想再次玩，並保持連續統計誰贏得了更多的獎金-玩家1或玩家2。</span></span></p>
+<p><strong>Tips(提示)</strong></p>
+<p><em>Starting this exercise from scratch will take you longer than 30 minutes. The best way to save time is to reuse work that has already been done!</em></p>
+<p>Because you have already done the work of the previous 3 exercises, no need to re-do them all! Simply take your code from those exercises, copy it into a new file, and start again. Even if you lost your code from those exercises, go to the solutions pages,<span> </span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html">here</a>,<span> </span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html">here</a>, and<span> </span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html">here</a>, pick your favorite solutions, and start from those!</p>
+<p>A large part of programming is reusing code written by someone else to accomplish a task. Sometimes it is fun to write a solution yourself, but other times you want to build on top of something else. This exercise gives you an opportunity to practice one of the arts of programming - starting from code someone else wrote and creating something on top of it.</p>
+<p><em><span>從頭開始此練習將花費您30分鐘以上的時間。節省時間的最好方法是重用已經完成的工作！</span></em></p>
+<p><span><span>由於您已經完成了前面3個練習的工作，因此無需全部重做！</span><span>只需從這些練習中獲取代碼，將其複製到新文件中，然後重新開始即可。</span><span>即使您從這些練習中丟失了代碼，也請轉到解決方案頁面，</span></span><a href="https://www.practicepython.org/exercise/2014/12/27/24-draw-a-game-board.html"><span><span>此處</span></span></a><span><span>，</span></span><a href="https://www.practicepython.org/exercise/2015/11/16/26-check-tic-tac-toe.html"><span><span>此處</span></span></a><span><span>和</span></span><a href="https://www.practicepython.org/exercise/2015/11/26/27-tic-tac-toe-draw.html"><span><span>此處</span></span></a><span><span>，選擇您喜歡的解決方案，然後從中開始！</span></span></p>
+<p><span><span>編程的很大一部分是重用別人編寫的代碼來完成任務。</span><span>有時自己編寫一個解決方案很有趣，但有時您想在其他基礎上構建。</span><span>本練習為您提供了一種實踐編程藝術的機會-從別人編寫的代碼開始，然後在其上創建一些東西。</span></span></p>
+<p><strong>Resources(資源資源)</strong></p>
+<p>To effectively complete this exercise, you will need to make extensive use of functions to accomplish small, modular, tasks within your larger program. Here are some resources about functions in case you get stuck:</p>
+<ul>
+<li><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html">The PracticePython take on functions</a></li>
+<li>Learn Python the Hard Way,<span> </span><a href="http://learnpythonthehardway.org/book/ex19.html">exercise 19</a><span> </span>and<span> </span><a href="http://learnpythonthehardway.org/book/ex21.html">exercise 21</a></li>
+<li>Execute some basic code on<span> </span><a href="http://www.learnpython.org/en/Functions">learnpython.org</a></li>
+</ul>
+<p>If you are new to Python, this might be one of the longest programs you have written so far, so have fun!</p>
+<p><span>為了有效地完成此練習，您將需要充分利用函數來完成較大程序中的小型模塊化任務。以下是有關函數的一些資源，以防您卡住：</span></p>
+<ul>
+<li><a href="https://www.practicepython.org/exercise/2014/04/16/11-check-primality-functions.html"><span><span>PracticePython具有功能</span></span></a></li>
+<li><span><span>艱苦學習Python，</span></span><a href="http://learnpythonthehardway.org/book/ex19.html"><span><span>練習19</span></span></a><span><span>和</span></span><a href="http://learnpythonthehardway.org/book/ex21.html"><span><span>21</span></span></a></li>
+<li><span><span>在</span><a href="http://www.learnpython.org/en/Functions"><span>learnpython.org</span></a><span>上執行一些基本代碼</span></span><a href="http://www.learnpython.org/en/Functions"><span></span></a></li>
+</ul>
+<p><span><span>如果您是Python的新手，那麼它可能是您迄今為止編寫的最長的程序之一，請盡情玩樂！</span></span></p>
+<p>Happy coding!</p>
+<p>編碼愉快!</p><br />hw3 << <a href='hw3.html'>Previous</a> <a href='b40923205.html'>Next</a> >> b40923205</div>
         
     <!-- footer -->
       <div class="container">
