@@ -4911,8 +4911,34 @@ print(cp1b)
 <p><img alt="" height="604" src="https://40823152.github.io/cp2020/images/%E8%9E%A2%E5%B9%95%E6%93%B7%E5%8F%96%E7%95%AB%E9%9D%A2%202020-11-28%20210024.png" width="1475"/></p>
 <p>不知道為什麼會超時而無法打開url。</p>
 <h2>a40923205</h2>
-<h2>a40923212</h2>
-<h2>a40923214</h2>
+<h2>a40923212</h2><p lang=""><span style="color: #ff0000;">亂數分組:</span></p><p lang=""><span>從網站上抓取班級名單</span></p><pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1b = []
+for line in urllib.request.urlopen(target_url):
+cp1b.append(int(line.decode('utf-8').rstrip())) 
+print(cp1b)</pre><p><span style="color: #ff0000;">&gt;&gt;</span><span><span style="color: #ff0000;">&gt;</span>[40523138, 40523148, 40723217, 40728238, 40823148, 40823152, 40923201, 40923202, 40923203, 40923204, 40923205, 40923206, 40923207, 40923208, 40923209, 40923210, 40923211, 40923212, 40923213, 40923214, 40923216, 40923217, 40923218, 40923219, 40923220, 40923221, 40923223, 40923224, 40923225, 40923226, 40923227, 40923228, 40923229, 40923230, 40923231, 40923232, 40923233, 40923234, 40923235, 40923236, 40923237, 40923238, 40923239, 40923240, 40923241, 40923242, 40923243, 40923244, 40923245, 40923246, 40923247, 40923248, 40923249, 40923250, 40923251, 40923252, 40923253]</span></p><p lang=""><span>from random import shuffle #random(亂數) #shuffle</span></p><pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">list = [40523138, 40523148, 40723217, 40728238, 40823148, 40823152, 40923201, 40923202, 40923203, 40923204, 40923205, 40923206, 40923207, 40923208, 40923209, 40923210, 40923211, 40923212, 40923213, 40923214, 40923216, 40923217, 40923218, 40923219, 40923220, 40923221, 40923223, 40923224, 40923225, 40923226, 40923227, 40923228, 40923229, 40923230, 40923231, 40923232, 40923233, 40923234, 40923235, 40923236, 40923237, 40923238, 40923239, 40923240, 40923241, 40923242, 40923243, 40923244, 40923245, 40923246, 40923247, 40923248, 40923249, 40923250, 40923251, 40923252, 40923253]
+shuffle(list)
+n = 5
+m = int(len(list)/n)
+list2 = []
+for i in range(0, len(list),m):
+list2.append(list[i:i+m])
+print(list2)
+
+</pre><p><span><span style="color: #ff0000;">&gt;&gt;&gt;</span>[[40923211, 40923242, 40923239, 40923250, 40923253, 40923210, 40923226, 40923240, 40923243, 40923225, 40923219], [40923218, 40923251, 40523148, 40923208, 40923214, 40923213, 40923207, 40523138, 40923224, 40823152, 40923232], [40923249, 40923234, 40923252, 40923245, 40923221, 40923203, 40923220, 40923205, 40923206, 40923238, 40923212], [40923228, 40923209, 40923204, 40923231, 40923216, 40823148, 40923244, 40923233, 40923246, 40923237, 40923230], [40923202, 40923223, 40923236, 40923247, 40923229, 40923201, 40728238, 40723217, 40923217, 40923227, 40923241], [40923248, 40923235]]</span></p><pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">import urllib.request
+target_url = "https://nfulist.herokuapp.com/?semester=1091&amp;courseno=0776"
+cp1b = []
+for line in urllib.request.urlopen(target_url):
+cp1b.append(int(line.decode('utf-8').rstrip()))
+from random import shuffle
+shuffle(cp1b)
+n = 5
+m = int(len(cp1b)/n)
+list2 = []
+for i in range(0,len(cp1b),m):
+list2.append(cp1b[i:i+m])
+print(list2)
+</pre><p><span style="color: #ff0000;">&gt;&gt;&gt;</span><span>[[40923243, 40923250, 40923205, 40923245, 40923220, 40723217, 40728238, 40923208, 40923248, 40923209, 40923238], [40923240, 40923217, 40923201, 40923204, 40923212, 40923229, 40923219, 40923202, 40923227, 40923233, 40923234], [40923242, 40923211, 40923223, 40923231, 40923224, 40923207, 40923226, 40923253, 40823148, 40923232, 40923247], [40523148, 40523138, 40923213, 40923252, 40823152, 40923249, 40923228, 40923235, 40923218, 40923241, 40923206], [40923251, 40923239, 40923216, 40923203, 40923214, 40923237, 40923225, 40923230, 40923210, 40923244, 40923221], [40923236, 40923246]]</span></p><h2>a40923214</h2>
 <h2>a40923217</h2>
 <h2>a40923226</h2>
 <h2>a40923236</h2>
@@ -5134,7 +5160,49 @@ print(pair)</pre><p>而這種打印出對項和值樣子的：(Adama, 100)等<br
 &gt;&gt;&gt; print(matrix[0][0])
 1
 &gt;&gt;&gt; print(matrix[1][1])
-4</pre><p>最酷的部分是您可以使用雙索引從列表列表中讀取元素matrix！通過索引，matrix[0][1]我們是說給我0的第1個元素matrix，在這種情況下為2。<br/>The cool part is that you can use double-indexing to read the elements from our list of lists matrix! By indexing matrix[0][1] we are saying give me the 1st element of the 0th element of matrix, which in this case is 2.</p><h3>b40923212 coding</h3><h2>b40923214</h2><h3>b40923214 coding</h3><h2>b40923217</h2><h3>b40923217 coding</h3><h2>b40923226</h2><h3>b40923226 coding</h3><h2>b40923236</h2><p>4:Divisors除數</p><p>Exercise 4(<span>練習4)</span></p><p><span>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a <em>divisor</em><span><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</span></span></p><p><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。（如果您不知道</span><em><span><span>除數</span></span></em><span><span>是多少，它是一個平均除以另一個數的數字。例如，13是26的除數，因為26/13沒有餘數。）</span></span></span></p><p><span><span><span></span></span></span></p><p>Discussion<span>(討論區)</span></p><p>The topics that you need for this exercise combine lists, conditionals, and user input. There is a new concept of creating lists.</p><p>There is an easy way to programmatically create lists of numbers in Python.</p><p>To create a list of numbers from 2 to 10, just use the following code:</p><p><span><span>本練習需要的主題包括列表，條件和用戶輸入。</span><span>有一個創建列表的新概念。</span></span></p><p><span><span>有一種簡便的方法可以在Python中以編程方式創建數字列表。</span></span></p><p><span><span>要創建2到10的數字列表，只需使用以下代碼：</span></span></p><p><span><span></span></span></p><pre><code class="language-python" data-lang="python">  <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)<br/></span></code></pre><p><span><span></span></span></p><p><span><span>Then the variable <code class="highlighter-rouge">x</code><span><span> </span>will contain the list<span> </span></span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code><span>. Note that the second number in the<span> </span></span><code class="highlighter-rouge">range()</code><span><span> </span>function is not included in the original list.</span></span></span></p><p><span><span>然後，變量</span></span><code class="highlighter-rouge">x</code><span><span>將包含列表</span></span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code><span><span>。</span><span>請注意，</span></span><code class="highlighter-rouge">range()</code><span><span>函數</span><span>中的第二個數字</span><span>不包括在原始列表中。</span></span></p><p><span><span>Now that <code class="highlighter-rouge">x</code><span><span> </span>is a list of numbers, the same for loop can be used with the list:</span></span></span></p><p><span><span>現在這</span></span><code class="highlighter-rouge">x</code><span><span>是一個數字列表，該列表可以使用相同的for循環：</span></span></p><pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span> 
+4</pre><p>最酷的部分是您可以使用雙索引從列表列表中讀取元素matrix！通過索引，matrix[0][1]我們是說給我0的第1個元素matrix，在這種情況下為2。<br/>The cool part is that you can use double-indexing to read the elements from our list of lists matrix! By indexing matrix[0][1] we are saying give me the 1st element of the 0th element of matrix, which in this case is 2.</p><h3>b40923212 coding</h3><pre class="brush:py;auto-links:false;toolbar:false" contenteditable="false">years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+ages = []
+for year in years_of_birth:
+ages.append(2014 - year)
+
+years_of_birth = [1990, 1991, 1990, 1990, 1992, 1991]
+ages = [2014 - year for year in years_of_birth]
+
+with open('file_to_read.txt', 'r') as open_file:
+all_text = open_file.read()
+
+with open('file_to_read.txt', 'r') as open_file:
+line = open_file.readline()
+while line:
+print(line)
+line = open_file.readline()
+
+student_scores = {'Adama': 100, 'Starbuck': 75, 'Apollo': 80, 'Athena': 85, 'Agathon': 90}
+
+adama_score = student_scores['Adama']
+
+adama_score = student_scores['Adama']
+adama_score += 100 % adama_score is now 200. This doesn't change the dictionary value
+student_scores['Adama'] = adama_score % the score in the dictionary is now updated
+
+all_scores = student_scores.keys()
+all_names = student_scores.values()
+
+for pair in student_scores.items():
+print(pair)
+
+game = [[1, 2, 0],
+[2, 1, 0],
+[2, 1, 1]]
+
+winner_is_2 = [[2, 2, 0],
+[2, 1, 0],
+[2, 1, 1]]
+
+winner_is_1 = [[1, 2, 0],
+[2, 1, 0],
+[2, 1, 1]]
+</pre><h2>b40923214</h2><h3>b40923214 coding</h3><h2>b40923217</h2><h3>b40923217 coding</h3><h2>b40923226</h2><h3>b40923226 coding</h3><h2>b40923236</h2><p>4:Divisors除數</p><p>Exercise 4(<span>練習4)</span></p><p><span>Create a program that asks the user for a number and then prints out a list of all the divisors of that number. (If you don’t know what a <em>divisor</em><span><span> </span>is, it is a number that divides evenly into another number. For example, 13 is a divisor of 26 because 26 / 13 has no remainder.)</span></span></p><p><span><span>創建一個程序，詢問用戶一個數字，然後打印出該數字的所有除數的列表。（如果您不知道</span><em><span><span>除數</span></span></em><span><span>是多少，它是一個平均除以另一個數的數字。例如，13是26的除數，因為26/13沒有餘數。）</span></span></span></p><p><span><span><span></span></span></span></p><p>Discussion<span>(討論區)</span></p><p>The topics that you need for this exercise combine lists, conditionals, and user input. There is a new concept of creating lists.</p><p>There is an easy way to programmatically create lists of numbers in Python.</p><p>To create a list of numbers from 2 to 10, just use the following code:</p><p><span><span>本練習需要的主題包括列表，條件和用戶輸入。</span><span>有一個創建列表的新概念。</span></span></p><p><span><span>有一種簡便的方法可以在Python中以編程方式創建數字列表。</span></span></p><p><span><span>要創建2到10的數字列表，只需使用以下代碼：</span></span></p><p><span><span></span></span></p><pre><code class="language-python" data-lang="python">  <span class="n">x</span> <span class="o">=</span> <span class="nb">range</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">11</span><span class="p">)<br/></span></code></pre><p><span><span></span></span></p><p><span><span>Then the variable <code class="highlighter-rouge">x</code><span><span> </span>will contain the list<span> </span></span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code><span>. Note that the second number in the<span> </span></span><code class="highlighter-rouge">range()</code><span><span> </span>function is not included in the original list.</span></span></span></p><p><span><span>然後，變量</span></span><code class="highlighter-rouge">x</code><span><span>將包含列表</span></span><code class="highlighter-rouge">[2, 3, 4, 5, 6, 7, 8, 9, 10]</code><span><span>。</span><span>請注意，</span></span><code class="highlighter-rouge">range()</code><span><span>函數</span><span>中的第二個數字</span><span>不包括在原始列表中。</span></span></p><p><span><span>Now that <code class="highlighter-rouge">x</code><span><span> </span>is a list of numbers, the same for loop can be used with the list:</span></span></span></p><p><span><span>現在這</span></span><code class="highlighter-rouge">x</code><span><span>是一個數字列表，該列表可以使用相同的for循環：</span></span></p><pre><code class="language-python" data-lang="python">  <span class="k">for</span> <span class="n">elem</span> <span class="ow">in</span> <span class="n">x</span><span class="p">:</span> 
     <span class="k">print</span> <span class="n">elem</span></code></pre><p><span><span>將產生結果：</span></span></p><pre><code class="language-pycon" data-lang="pycon">  2
   3
   4
@@ -5239,17 +5307,7 @@ print(Counter(month))</pre><h3>b40923236 coding</h3><h2>b40923241</h2><p>第3題
 
 如果井字遊戲被表示為列表列表，例如：<br/></span></pre><pre><code class="language-python" data-lang="python"><span class="n">game</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
 	<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">0</span><span class="p">],</span>
-	<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span></code></pre><pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW"><span>given a 3 by 3 list of lists that represents a Tic Tac Toe game board, tell me whether anyone has won, and tell me which player won, if any. A Tic Tac Toe win is 3 in a row - either in a row, a column, or a diagonal. Don’t worry about the case where TWO people have won - assume that in every board there will only be one winner.</span><br/></span></pre><pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">給定一個代表Tic Tac Toe遊戲板的3 x 3列表，請告訴我是否有人贏了，並告訴我哪個玩家贏了（如果有）。井字遊戲的勝利是連續3個-連續，一列或對角線。不必擔心會有兩個人獲勝的情況-假設在每個董事會中只有一個獲勝者。</span></pre><p><span></span></p><p><span>kaggle: <span> </span><a href="https://www.kaggle.com/wtf40923241/hw3-0026" title="https://www.kaggle.com/wtf40923241/hw3-0026">https://www.kaggle.com/wtf40923241/hw3-0026</a></span></p><h3>b40923241 coding</h3><h2>b40923242</h2><h3>b40923242 coding</h3><h2>b40923246</h2><h3>b40923246 coding</h3><h2>b40923251</h2><h3>b40923251 coding</h3><h1>會議記錄</h1>
-<p>第一次會議記錄</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WqUOWbLVbbQ" width="560"></iframe></p>
-<p>第2次會議紀錄</p>
-<p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Va-CqSA-Yls" width="560"></iframe></p>
-<p></p>
-<p>第3次會議紀錄<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/nohwT3UtZ54" width="560"></iframe></p>
-<p></p>
-<p></p>
-<p></p>
-<h1>問題</h1>
+	<span class="p">[</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">]]</span></code></pre><pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr"><span lang="zh-TW"><span>given a 3 by 3 list of lists that represents a Tic Tac Toe game board, tell me whether anyone has won, and tell me which player won, if any. A Tic Tac Toe win is 3 in a row - either in a row, a column, or a diagonal. Don’t worry about the case where TWO people have won - assume that in every board there will only be one winner.</span><br/></span></pre><pre class="tw-data-text tw-text-large XcVN5d tw-ta" data-placeholder="翻譯" dir="ltr" id="tw-target-text"><span lang="zh-TW">給定一個代表Tic Tac Toe遊戲板的3 x 3列表，請告訴我是否有人贏了，並告訴我哪個玩家贏了（如果有）。井字遊戲的勝利是連續3個-連續，一列或對角線。不必擔心會有兩個人獲勝的情況-假設在每個董事會中只有一個獲勝者。</span></pre><p><span></span></p><p><span>kaggle: <span> </span><a href="https://www.kaggle.com/wtf40923241/hw3-0026" title="https://www.kaggle.com/wtf40923241/hw3-0026">https://www.kaggle.com/wtf40923241/hw3-0026</a></span></p><h3>b40923241 coding</h3><h2>b40923242</h2><h3>b40923242 coding</h3><h2>b40923246</h2><h3>b40923246 coding</h3><h2>b40923251</h2><h3>b40923251 coding</h3><h1>會議記錄</h1><p>第一次會議記錄</p><p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/WqUOWbLVbbQ" width="560"></iframe></p><p>第2次會議紀錄</p><p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/Va-CqSA-Yls" width="560"></iframe></p><p></p><p>第3次會議紀錄<iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/nohwT3UtZ54" width="560"></iframe></p><p>第四次會議紀錄</p><p><iframe allowfullscreen="allowfullscreen" height="314" src="//www.youtube.com/embed/DnbJReropzw" width="560"></iframe></p><p></p><p></p><h1>問題</h1>
 <h2>宿舍分組網頁連線問題</h2>
 <p><strong>問題</strong></p>
 <p>想要讓組員連到分組網站，且我的ip不是真實ip，所以無法使組員連到分組網站。</p>
